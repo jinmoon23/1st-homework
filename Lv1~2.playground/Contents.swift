@@ -16,6 +16,9 @@ class Calculator {
         return num1 * num2
     }
     func division(num1: Double, num2: Double) -> Double {
+        if num2 == 0 {
+            return 0
+        }
         return (num1 / num2)
     }
     func divisionReminder() -> Int {
