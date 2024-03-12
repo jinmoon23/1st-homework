@@ -1,25 +1,25 @@
 // 함수만으로 구성된 클래스 생성
 class AddOperation {
-    func Operate(num1: Int, num2: Int) -> Int{
+    func Operate(num1: Double, num2: Double) -> Double{
         return num1 + num2
     }
 }
 class SubOperation {
-    func Operate(num1: Int, num2: Int) -> Int {
+    func Operate(num1: Double, num2: Double) -> Double {
         return num1 - num2
     }
 }
 class MultiOperation {
-    func Operate(num1: Int, num2: Int) -> Int {
+    func Operate(num1: Double, num2: Double) -> Double {
         return num1 * num2
     }
 }
 class DivOperation {
-    func Operate(num1: Int, num2: Int) -> Int? {
+    func Operate(num1: Double, num2: Double) -> Double? {
         if num2 == 0 {
             return nil
         }
-        return num1 / num2
+        return Double(num1) / Double(num2)
     }
 }
 

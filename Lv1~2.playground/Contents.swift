@@ -1,38 +1,31 @@
 class Calculator {
-    var num1: Int
-    var num2: Int
     
-    init(num1: Int, num2: Int) {
-        self.num1 = num1
-        self.num2 = num2
-    }
-    func add() -> Int {
+    func add(num1: Int, num2: Int) -> Int {
         return num1 + num2
     }
-    func subtraction() -> Int {
+    func subtraction(num1: Int, num2: Int) -> Int {
         return num1 - num2
     }
-    func multiple() -> Int {
+    func multiple(num1: Int, num2: Int) -> Int {
         return num1 * num2
     }
-    func division(num1: Double, num2: Double) -> Double {
+    func division(num1: Int, num2: Int) -> Double? {
         if num2 == 0 {
-            return 0
+            return nil
         }
-        return (num1 / num2)
+        return Double(num1) / Double(num2)
     }
-    func divisionReminder() -> Int {
+    func divisionReminder(num1: Int, num2: Int) -> Int {
         return num1 % num2
-        
     }
 }
-let calculator = Calculator(num1: 5, num2: 2)
+let calculator = Calculator()
 
-let resultAdd = calculator.add()
-let resultSubtraction = calculator.subtraction()
-let resultMultiple = calculator.multiple()
-let resultDivision = calculator.division(num1: 5, num2: 2)
-let resultReminder = calculator.divisionReminder()
+let resultAdd = calculator.add(num1: 5, num2: 2)
+let resultSubtraction = calculator.subtraction(num1: 5, num2: 2)
+let resultMultiple = calculator.multiple(num1: 5, num2: 2)
+let resultDivision = calculator.division(num1: 5, num2: 0)
+let resultReminder = calculator.divisionReminder(num1: 5, num2: 2)
 
 print(resultAdd)
 print(resultSubtraction)
